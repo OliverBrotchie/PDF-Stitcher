@@ -1,0 +1,396 @@
+Lecture 1: 
+  
+  theorem begin
+
+
+
+
+
+Foundations 1, F29FA1
+Lecture 1
+Lecturers:
+Fairouz Kamareddine Edinburgh and Adrian Turcanu Dubai
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+
+►  Earlier, functions only dealt with numbers.
+►  General definition of function 1879 is key to Frege’s formalisation of logic. Now, functions take complex arguments 
+and return complex results.
+►  Computer programs are generalized functions.
+►  Self-application of functions (e.g., fun is fun) was at the heart of Russell’s paradox 1902.
+►  In programming we need to apply a program to other programs (and sometimes to itself).
+►  To avoid paradox Russell controled function application via type theory. Most programming languages use type theory 
+to ensure correctness and termination.
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+►  Programming languages have various degrees of typing
+►  Russell 1903 gives the first type theory: the Ramified Type Theory (rtt).
+►  rtt is used in Russell and Whitehead’s Principia Mathematica 1910–1912.
+►  rtt was eventually simplified to stt (simple type theory) which is used in a number of programming paradigms.
+►  stt was not powerful enough so other more powerful type systems developed like polymorphic type theory (and you have 
+worked with polymorphism in a number of programming languages).
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+
+
+►  Simple theory of types (stt): Ramsey 1926, Hilbert and Ackermann 1928.
+►  Church’s simply typed λ-calculus λ→ 1940 = λ-calculus +
+stt.
+►  The hierarchies of types (and orders) as found in rtt and
+stt are unsatisfactory.
+►  Hence, birth of different systems of functions and types, each with different functional power.
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+
+►  Hence, birth of different programming languages each with
+different expressiveness and speed.
+►  Frege’s functions ƒ= Principia’s functions ƒ= λ-calculus
+functions.
+►  Which notions of functions are needed in programming languages?
+►  Non-first-class functions allow us to stay at a lower order (keeping decidability, typability, computability, etc.) 
+without losing the flexibility of the higher-order aspects.
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+In the 19th century, the need for a more precise style in mathematics arose, because controversial results had appeared 
+in analysis.
+►  1821: Many of these controversies were solved by the work of Cauchy. E.g., he introduced a precise definition of 
+convergence in his Cours d’Analyse
+►  1872: Due to the more exact definition of real numbers given by Dedekind, the rules for reasoning with real numbers 
+became even more precise.
+►  1895-1897: Cantor began formalizing set theory and made contributions to number theory.
+►  1889: Peano formalized arithmetic, but did not treat logic or quantification.
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+►  1879: Frege was not satisfied with the use of natural language in mathematics:
+“. . . I found the inadequacy of language to be an obstacle; no matter how unwieldy the expressions I was ready to 
+accept, I was less and less able, as the relations became more and more complex, to attain the precision that my 
+purpose required.”
+(Begriffsschrift, Preface)
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+►  Frege therefore presented Begriffsschrift, the first formalisation of logic giving logical concepts via symbols 
+rather than natural language.
+“[Begriffsschrift’s] first purpose is to provide us with the most reliable test of the validity of a chain of 
+inferences and to point out every presupposition that tries to sneak in unnoticed, so that its origin can be 
+investigated.”
+(Begriffsschrift, Preface)
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+The introduction of a very general definition of function was the key to the formalisation of logic. Frege defined what 
+we will call the Abstraction Principle.
+Abstraction Principle
+
+“If in an expression, [. . . ]  a simple or a compound sign has one or more occurrences and if we regard that sign as 
+replaceable in all or some of these occurrences by something else (but everywhere by the same thing), then we call the 
+part that remains invariant in the expression a function, and the replaceable part the argument of the function.”
+(Begriffsschrift, Section 9)
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+►  E.g., 2 apple = apple + apple 2 chair = chair + chair
+Hence the function 2x = x + x .
+►  Frege put no restrictions on what could play the role of an argument.
+►  An argument could be a number (as was the situation in analysis), but also a proposition, or a function.
+►  he result of applying a function to an argument did not have to be a number.
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+Frege was aware of some typing rule that does not allow to substitute functions for object variables or objects for 
+function variables:
+“ Now just as functions are fundamentally different from objects, so also functions whose arguments are and must be 
+functions are fundamentally different from functions whose arguments are objects and cannot be anything else.  I call 
+the latter first-level, the former second-level.”
+(Function and Concept, pp. 26–27)
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+The Begriffsschrift, however, was only a prelude to Frege’s writings.
+►  In Grundlagen der Arithmetik he argued that mathematics can be seen as a branch of logic.
+►  In Grundgesetze der Arithmetik he described the elementary parts of arithmetics within an extension of the logical 
+framework of Begriffsschrift.
+►  Frege approached the paradox threats for a second time at the end of Section 2 of his Grundgesetze.
+►  He did not apply a function to itself, but to its course-of-values.
+►  “the function Φ(x ) has the same course-of-values as the function Ψ(x )” if:
+“ Φ(x ) and Ψ(x ) always have the same value for the same argument.”
+(Grundgesetze, p. 7)
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+►  E.g., let Φ(x ) be x ∧ ¬x , and Ψ(x ) be x ↔ ¬x , for all propositions x .
+►  All essential information of a function is contained in its graph.
+►  So a system in which a function can be applied to its own graph should have similar possibilities as a system in 
+which a function can be applied to itself.
+►  Frege excluded the paradox threats by forbidding
+self-application, but due to his treatment of courses-of-values these threats were able to enter his system through a 
+back door.
+►  In 1902, Russell wrote to Frege that he had discovered a paradox in Frege’s system.
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+►  Frege’s system was not the only paradoxical one.
+►  The Russell Paradox can be derived in Peano’s system as well, as well as on Cantor’s Set Theory by defining the 
+class
+K d=ef {x | x ƒ∈ x} and deriving K ∈ K ←→ K ƒ∈ K .
+►  Paradoxes were already widely known in antiquity.
+►  The oldest logical paradox: the Liar’s Paradox “This sentence is not true”, also known as the Paradox of Epimenides. 
+It is referred to in the Bible (Titus 1:12) and is based on the confusion between language and meta-language.
+►  The Burali-Forti paradox is the first of the modern paradoxes. It is a paradox within Cantor’s theory on ordinal 
+numbers.
+►  Cantor’s paradox on the largest cardinal number occurs in the same field. It discovered by Cantor around 1895, but 
+was not published before 1932.
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+►  Logicians considered these paradoxes to be out of the scope of logic:
+The Liar’s Paradox can be regarded as a problem of linguistics. The paradoxes of Cantor and Burali-Forti occurred in 
+what was considered in those days a highly questionable part of mathematics: Cantor’s Set Theory.
+►  The Russell Paradox, however, was a paradox that could be formulated in all the systems that were presented at the 
+end of the 19th century (except for Frege’s Begriffsschrift). It was at the very basics of logic. It could not be 
+disregarded, and a solution to it had to be found.
+►  In 1903-1908, Russell suggested the use of types to solve the problem
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+►           “In all the above contradictions there is a common characteristic, which we may describe as
+self-reference or reflexiveness.  [. . . ] In each contradiction something is said about all cases of some kind, and 
+from what is said a new case seems to be generated, which both is and is not of the same kind as the cases of which all 
+were concerned in what was said.”
+(Mathematical logic as based on the theory of types)
+►  Russell’s plan was, to avoid the paradoxes by avoiding all possible self-references.
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+►  Russell postulated the “vicious circle principle”:
+►           “Whatever involves all of a collection must not be one of the collection.”
+(Mathematical logic as based on the theory of types)
+►  Russell implements this principle very strictly using types.
+
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+►  Ramsey considers it essential to divide the paradoxes into two parts:
+►  logical or syntactical paradoxes (like the Russell paradox, and the Burali-Forti paradox) are removed
+“by pointing out that a propositional function cannot significantly take itself as argument, and by dividing functions 
+and classes into a hierarchy of types according to their possible arguments.”
+(The Foundations of Mathematics, p. 356)
+►  Semantical paradoxes are excluded by the hierarchy of orders. These paradoxes (like the Liar’s paradox, and the 
+Richard Paradox) are based on the confusion of language and
+meta-language. These paradoxes are, therefore, not of a purely mathematical or logical nature.
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+►  Our course is about programs (special kinds of functions) and fast, efficient, terminating computations.
+►  Historically, functions have long been treated as a kind of
+meta-objects.
+►  However, we want to reason about our programs (does my program terminate? is it fast, etc).
+►  Church’s lambda calculus made every function a first-class citizen.
+►  Functions have gone through a long process of evolution involving various degrees of 
+abstraction/construction/instantiation/evaluation.
+►  Programs too have and are going through a long process of evolution.
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+►  Aims To acquaint the students with the syntax and semantics of lambda calculus and reduction strategies. Solving 
+mutually recursive equations and fixed point theorems. Substitution, call by name, call by value, termination.
+►  Learning Outcomes of lambda calculus part Competence in lambda calculus, different variable techniques (de Bruijn 
+indices), semantics of small programs.
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+►  Main References
+1.  Chris Hankin, An introduction to lambda calculi for computer scientists. King’s college publications, Texts in 
+Computing, Volume 2, 164 pages. ISBN 0-9543006-5-3.
+2.  Mike Gordon, Programming Language Theory and Implementation. Prentice Hall. ISBN 0-13-730409-9.
+3.  Henk Barendregt, the syntax and semantics of the lambda calculus. North-Holland.
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+Functions as first class objects
+
+
+
+►  Functional programming is based on the notion of function and of function application.
+►  In functional programming, functions are first class objects and they can be applied to themselves, or to other 
+functions leading either other functions as result.
+►  For example, add is a function that takes two numbers and returns a number.
+►  add 1 is also a function that takes a number and adds 1 to it.
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+Polymorphic functions
+
+
+►  In addition to this higher order nature of functions in functional programming, we have the polymorphic nature, 
+which enables us to write one function only and specialise the function to whichever type we are working with.
+►  For example, the identity function which takes numbers and return numbers, takes lists and returns lists, etc.
+►  So we can have: IdN : N ›→ N
+IdLists : Lists ›→ Lists
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+One simple language can represent all that
+
+
+►  It might be surprising to know that notions of higher order, polymorphism, functional application, recursion and 
+many other functional programming notions can be captured in a very precise way in a very simple language.
+►  This simple language contains simply functional abstraction and functional application.
+►  In the next few lectures we will see how we can capture parts of functional programming in such a language, the type 
+free λ- calculus.
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
+
+
+
+
+
+
+This first lecture was an introduction. It is not examinable. From next lecture, everything is examinable.
+
+
+
+
+
+
+
+
+
+
+
+Lecturers:    Fairouz Kamareddine Edinburgh and Adrian Turcanu DubFaoi undations 1, F29FA1   Lecture 1
