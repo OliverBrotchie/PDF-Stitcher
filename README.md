@@ -4,8 +4,8 @@ Stitch together all pdfs in a folder from command line using deno.
 
 Args:
 
-    1. The folder to look in.
-    2. What to save it as.
+1. The folder to look in.
+2. What to save it as.
 
 Example:
 

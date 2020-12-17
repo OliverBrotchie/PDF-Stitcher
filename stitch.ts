@@ -1,6 +1,6 @@
 import { PDFDocument } from "https://cdn.pika.dev/pdf-lib@^1.6.0";
 
-console.log("Working on it... ");
+console.log("Working on it... ⌛");
 
 let pdf = await PDFDocument.create({});
 for (const file of Deno.readDirSync(Deno.args[0])) {
