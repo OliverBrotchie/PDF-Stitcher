@@ -1,4 +1,4 @@
-# Pdf Stitcher
+# PDF Stitcher
 
 Stitch together all pdfs in a folder from command line using deno.
 
