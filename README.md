@@ -1,6 +1,6 @@
 # PDF Stitcher
 
-Stitch together all pdfs in a folder from command line using deno.
+A very simple progrma that stitches together all pdfs in a folder from command line using deno.
 
 Args:
 
@@ -10,5 +10,5 @@ Args:
 Example:
 
 ```shell
-deno run --allow-read --allow-write stitch.ts pdfs new.pdf
+deno run --allow-read --allow-write stitch.ts path/to/folder new.pdf
 ```
