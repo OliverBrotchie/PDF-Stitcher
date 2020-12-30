@@ -1,6 +1,6 @@
 # PDF Stitcher
 
-A very simple progrma that stitches together all pdfs in a folder from command line using deno.
+A very simple command line interface that stitches together all pdfs in a folder using deno.
 
 Args:
 
